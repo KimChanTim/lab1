@@ -68,8 +68,7 @@ bool Tree::iterator::operator== (const Tree::iterator& it) const {
 }
 
 Tree::iterator& Tree::iterator::operator++ () {
-    if (value->parent == nullptr)
-        value = nullptr;
+    if (value->parent == nullptr) ;
     else if (value->parent->right == value)
         value = value->parent;
     else {
@@ -104,8 +103,7 @@ Tree::iterator& Tree::iterator::operator-- () {
 
 Tree::iterator Tree::iterator::operator++ (int) {
     Node* tmp = value;
-    if (value->parent == nullptr)
-        value = nullptr;
+    if (value->parent == nullptr) ;
     else if (value->parent->right == value)
         value = value->parent;
     else {

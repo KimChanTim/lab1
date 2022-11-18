@@ -12,10 +12,7 @@ class Tree {
         Node* right = nullptr;
 
         Node(const int& val, Node* parent) : value(val), parent(parent) {};
-        /*
-        friend std::ostream& operator<< (std::ostream& os, const Node& node) {
-            return os << node.value;
-        }; */
+
     };
     Node* root;
 public:

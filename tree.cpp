@@ -1,4 +1,4 @@
-#include "tree.h"
+ #include "tree.h"
 
 Tree::Tree() {
     root = new Node(1, nullptr);
@@ -68,7 +68,8 @@ bool Tree::iterator::operator== (const Tree::iterator& it) const {
 }
 
 Tree::iterator& Tree::iterator::operator++ () {
-    if (value->parent == nullptr) ;
+    if (value->parent == nullptr) {
+    }
     else if (value->parent->right == value)
         value = value->parent;
     else {
@@ -103,9 +104,12 @@ Tree::iterator& Tree::iterator::operator-- () {
 
 Tree::iterator Tree::iterator::operator++ (int) {
     Node* tmp = value;
-    if (value->parent == nullptr) ;
-    else if (value->parent->right == value)
+
+    if (value->parent == nullptr) {
+    }
+    else if (value->parent->right == value) {
         value = value->parent;
+    }
     else {
         value = value->parent;
         if (value->right != nullptr) {

@@ -45,6 +45,7 @@ TEST_F(OneNodeTest, TreeBuildTest1) {
 
 TEST_F(GenerateTreeTest, TreeBuildTest2) {
     Tree::iterator it = tree.begin();
+    EXPECT_EQ(*(--it), 7);
     EXPECT_EQ(*(it--), 7);
     EXPECT_EQ(*(it++), 7);
     EXPECT_EQ(*(it++), 5);
